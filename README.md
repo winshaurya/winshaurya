@@ -1,67 +1,112 @@
-<h1 align="center">Hi 👋, I'm Shaurya Mishra</h1>
-<h3 align="center">Frontend Dev • Full-Stack Engineer • Design Enthusiast • GSoC Contributor</h3>
-
+👋 Hello, I'm Shaurya Mishra!
+Crafting innovative solutions with code and design.
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&weight=500&size=22&pause=1000&color=00FFD9&center=true&vCenter=true&width=435&lines=Designing+code+with+emotion+and+function.;Full-stack+developer+%F0%9F%92%BB;GSoC+Contributor+%F0%9F%92%AA;Open+Source+Supporter+%E2%9D%A4%EF%B8%8F" alt="Typing SVG" />
+<a href="https://github.com/anuraghazra/github-readme-stats">
+<img src="https://github-readme-stats.vercel.app/api?username=winshaurya1&show_icons=true&theme=radical&hide_border=true&count_private=true" alt="Shaurya's GitHub Stats" />
+</a>
+<a href="https://github.com/anuraghazra/github-readme-stats">
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=winshaurya1&layout=compact&theme=radical&hide_border=true" alt="Top Languages" />
+</a>
 </p>
 
----
+<p align="center">
+<img src="https://github-profile-trophy.vercel.app/?username=winshaurya1&theme=radical&no-frame=true&no-bg=true" alt="Shaurya's GitHub Trophies" />
+</p>
 
-### 🧑‍💻 About Me
+🚀 About Me
+I'm a Computer Engineering student at Shri G. S. Institute of Technology & Science, Indore, with a passion for building impactful software and creating engaging designs. With a strong foundation in competitive programming and full-stack development, I thrive on tackling complex challenges and learning new technologies. I'm always looking for opportunities to contribute to open-source projects and collaborate on exciting ventures.
 
-- 🎓 Final-year CSE undergrad at SGSITS Indore  
-- 🎯 Passionate about **building useful UI-first products**  
-- 🛠️ Currently working with **React**, **Node.js**, **MongoDB**, and **Tailwind CSS**  
-- 📊 Exploring **Inngest**, **LLMs**, and **design systems**  
-- 🌐 GSoC Contributor @ Internet Archive (2025)  
-- 🧠 Learning by building: systems that are useful and scalable
+🎓 UG III Year, Computer Engineering, SGSITS, Indore (Batch 2027)
 
----
+📧 Email: winshaurya9@gmail.com
 
-### 🚀 Projects I'm Proud Of
+📞 Mobile: +91 6262544893
 
-#### 🔍 [Movie Recommendation System](https://github.com/winshaurya1/MovieReccomendationSystem)
-Built with **Python**, **Pandas**, **Scikit-learn**, and **Streamlit** — fetches real-time posters with TMDb API  
-➡️ [Live Demo](https://moviereccomendationsystem-9669.streamlit.app)
+📍 Based in Indore, India
 
-#### ♟️ [Bit.Chess](https://github.com/winshaurya1/bit.chess)
-Real-time online chess game using **Socket.IO**, **MongoDB**, **React**, and **JWT**  
+🛠️ Skills & Technologies
+Category
+
+Skills
+
+Programming
+
+C++, Python, JavaScript, Java
+
+Web Development
+
+React, Node.js, Express.js, MongoDB, Socket.IO, Streamlit, HTML, CSS, Tailwind CSS
+
+Databases
+
+MongoDB
+
+Tools & Platforms
+
+Git, GitHub, Figma, Canva, VS Code, Postman, Vercel, Netlify, Render, Railway, Heroku, AWS, Google Cloud
+
+Libraries
+
+Pandas, Scikit-learn, JWT, Inngest
+
+Concepts
+
+Data Structures & Algorithms (DSA), Object-Oriented Programming (OOP), WebSockets, RESTful APIs, UI/UX Design
+
+🌟 Featured Projects
+Here are some of my standout projects that showcase my skills and passion:
+
+🔍 Movie Recommendation System
+Built with Python, Pandas, Scikit-learn, and Streamlit — fetches real-time posters with TMDb API
+➡️ Live Demo
+A smart system that suggests movies based on your preferences, powered by machine learning and real-time data.
+
+♟️ Bit.Chess
+Real-time online chess game using Socket.IO, MongoDB, React, and JWT
 Designed to learn WebSockets & multiplayer architecture
+An engaging multiplayer chess experience built from scratch to explore the intricacies of real-time communication and scalable web architectures.
 
-#### 💰 [Accrue – Finance Tracker](https://github.com/winshaurya1/accrue)
-Personal finance tracking web app with modern UI, **Inngest-ready**, **MERN stack**, and scalable backend API
+💰 Accrue – Finance Tracker
+Personal finance tracking web app with modern UI, Inngest-ready, MERN stack, and scalable backend API
+A sleek and intuitive application to help you manage your personal finances, featuring a robust MERN stack backend and a user-friendly interface.
 
----
+📚 DSA (Data Structures & Algorithms)
+My personal repository for Data Structures and Algorithms practice.
+A collection of my solutions and implementations for various DSA problems, reflecting my commitment to competitive programming and problem-solving.
 
-### 🛠 Tech Stack
+🏆 Scholastic Achievements & Experience
+Operations Analyst Virtual Internship | Goldman Sachs (Forage)
+Completed a comprehensive virtual internship focusing on operations analysis.
 
-<img src="https://skillicons.dev/icons?i=react,tailwind,nodejs,express,mongodb,vite,python,streamlit,js,ts,git,github,firebase,docker" />
+Entrepreneurship Hub, E-Cell, SGSITS
+Managed 2 Startup pitching events focused on early-stage funding and Startup growth.
+Fostered strong ties with venture capitalists and startup founders of Indore Region to facilitate mentorship and ecosystem exposure in GS Incubation forum.
 
----
+Design Coordinator, GSPH Production House, SGSITS
+Directed design for 3 major SGSITS events including the flagship Media Summit, handling visual identity, theme curation, and branding strategy.
+Produced 50+ high-quality assets including event posters, banners, stage backdrops, and screen transitions with tight turnarounds and consistent visual language.
+Demonstrated advanced proficiency in Figma and Canva to streamline workflows and lead a small team of junior designers during peak fest execution.
 
-### 📈 GitHub Stats
+Competitive Programming: 200+ problems solved on CodeChef (2 stars, max 1408), CodeForces (max 684), LeetCode (1,465 max).
+
+JEE Mains: Achieved 97.2 percentile.
+
+MMVY Scholarship: Received 100% tuition fee waiver for academic merit.
+
+Taekwondo Player: Won gold at district-level tournament; earned the Blue-Red belt, showcasing discipline and physical excellence.
+
+🤝 Contributor at OSConnect.in (OSCI)
+I am proud to be a contributor to OSConnect.in (OSCI), an open-source community dedicated to fostering collaboration and innovation. My involvement includes:
+
+[Details of your contributions to OSCI - Please add specific contributions here, e.g., "contributed to the development of feature X", "mentored new members", "organized community events", etc.]
+
+🌐 Connect with Me
+<p align="center">
+<a href="https://github.com/winshaurya1" target="_blank"><img src="https://img.shields.io/badge/GitHub-%2312100E.svg?&style=for-the-badge&logo=github&logoColor=white" alt="GitHub" /></a>
+<a href="mailto:shauryamishra5525@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail" /></a>
+<!-- Add more social links if you have them, e.g., LinkedIn, Twitter -->
+</p>
 
 <p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=winshaurya1&show_icons=true&theme=tokyonight" />
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=winshaurya1&layout=compact&theme=tokyonight" />
+&copy; 2025 Shaurya Mishra | Built with ❤️ and Code
 </p>
-
----
-
-### ✨ Let's Connect
-
-<p align="left">
-  <a href="https://linkedin.com/in/shaurya-mishra-0b4751204" target="blank">
-    <img align="center" src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin" />
-  </a>
-  <a href="mailto:winshaurya@gmail.com" target="blank">
-    <img align="center" src="https://img.shields.io/badge/Gmail-red?style=for-the-badge&logo=gmail" />
-  </a>
-</p>
-
----
-
-### 🧠 Motto
-
-> “Build fast. Design intentionally. Solve something real.”
-
