@@ -62,5 +62,5 @@ Personal finance tracking web app with modern UI, **Inngest-ready**, **MERN stac
 
 ### 🧠 Motto
 
-> “Build fast. Design intentionally. Solve something real.”
+> “Build fast. Design intentionally. Solve something.”
 
