@@ -17,20 +17,7 @@
 
 ---
 
-###  Projects
 
-#### 🔍 [Movie Recommendation System](https://github.com/winshaurya1/MovieReccomendationSystem)
-Built with **Python**, **Pandas**, **Scikit-learn**, and **Streamlit** — fetches real-time posters with TMDb API  
-➡️ [Live Demo](https://moviereccomendationsystem-9669.streamlit.app)
-
-#### ♟️ [Bit.Chess](https://github.com/winshaurya1/bit.chess)
-Real-time online chess game using **Socket.IO**, **MongoDB**, **React**, and **JWT**  
-Designed to learn WebSockets & multiplayer architecture
-
-#### 💰 [Accrue – Finance Tracker](https://github.com/winshaurya1/accrue)
-Personal finance tracking web app with modern UI, **Inngest-ready**, **MERN stack**, and scalable backend API
-
----
 
 ### 🛠 Tech Stack
 
@@ -48,19 +35,20 @@ Personal finance tracking web app with modern UI, **Inngest-ready**, **MERN stac
 ---
 
 ### ✨ Let's Connect
-
 <p align="left">
-  <a href="https://linkedin.com/in/shaurya-mishra-0b4751204" target="blank">
-    <img align="center" src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin" />
+  <a href="https://linkedin.com/in/shaurya-mishra-0b4751204" target="_blank">
+    <img src="https://img.shields.io/badge/LinkedIn-%230077B5.svg?&style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
-  <a href="mailto:winshaurya9@gmail.com" target="blank">
-    <img align="center" src="https://img.shields.io/badge/Gmail-red?style=for-the-badge&logo=gmail" />
+  <a href="mailto:winshaurya9@gmail.com" target="_blank">
+    <img src="https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Gmail Badge"/>
   </a>
+</p>
+
 </p>
 
 ---
 
 ### 🧠 Motto
 
-> “Build fast. Design intentionally. Solve something.”
+> “Build fast. Design Good. Solve something.”
 
