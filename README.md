@@ -27,15 +27,18 @@
 
 ### 📈 GitHub Stats
 
-<p align="center">
-  <img width="48%" src="https://github-readme-stats.vercel.app/api?username=winshaurya&show_icons=true&theme=tokyonight" />
-  <img width="48%" src="https://github-readme-stats.vercel.app/api/top-langs/?username=winshaurya&layout=compact&theme=tokyonight" />
-</p>
+  <picture align="center">
+    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=winshaurya&theme=vision-friendly-dark&hide_border=true&date_format=j%20M%5B%20Y%5D" />
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=winshaurya&theme=buefy&hide_border=true&date_format=j%20M%5B%20Y%5D&currStreakNum=FFB000&currStreakLabel=FFB000" />
+    <img align="center" src="https://streak-stats.demolab.com?user=winshaurya&theme=buefy&hide_border=true&date_format=j%20M%5B%20Y%5D&currStreakNum=FFB000&currStreakLabel=FFB000" alt="winshaurya's GitHub Streak" />
+  </picture>
 
----
-<p align="center">
-  <img src="https://github.com/winshaurya/winshaurya/blob/main/profile-3d-contrib/profile-green-animate.svg" alt="3D Contribution Calendar"/>
-</p>
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SudoKMaar/SudoKMaar/output/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SudoKMaar/SudoKMaar/output/github-snake.svg" />
+  <img alt="winshaurya's GitHub Contribution Heatmap" src="https://raw.githubusercontent.com/SudoKMaar/SudoKMaar/output/github-snake.svg" />
+</picture>
+
 
 ---
 
