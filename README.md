@@ -11,8 +11,7 @@
 
 -  pre-Final-year CSE undergrad. 
 -  Passionate about **building useful UI-first products**  
--  Currently working with **React**, **Node.js**, **MongoDB**, and **Tailwind CSS**  
--  Exploring **LLMs**, **WorkFlows** and **design systems**    
+-  Exploring **LLMs**, **WorkFlows**,**Automations** and **design systems**    
 -  DSA night-OWL
 
 ---
