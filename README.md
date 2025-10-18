@@ -17,13 +17,6 @@
 ---
 
 
-
-### 🛠 Tech Stack
-
-<img src="https://skillicons.dev/icons?i=react,tailwind,nodejs,express,mongodb,vite,python,streamlit,js,ts,git,github,firebase,docker" />
-
----
-
 ### 📈 GitHub Stats
 
   <picture align="center">
