@@ -21,8 +21,8 @@
 
   <picture align="center">
     <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=winshaurya&theme=vision-friendly-dark&hide_border=true&date_format=j%20M%5B%20Y%5D" />
-    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=winshaurya&theme=buefy&hide_border=true&date_format=j%20M%5B%20Y%5D&currStreakNum=FFB000&currStreakLabel=FFB000" />
-<!--     <img align="center" src="https://streak-stats.demolab.com?user=winshaurya&theme=buefy&hide_border=true&date_format=j%20M%5B%20Y%5D&currStreakNum=FFB000&currStreakLabel=FFB000" alt="winshaurya's GitHub Streak" /> -->
+    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=winshaurya&theme=buefy&hide_border=true&date_format=j%20M%5B%20Y%5D&currStreakNum=FFB000&currStreakLabel=FFB001" />
+<!--     <img align="center" src="https://streak-stats.demolab.com?user=winshaurya&theme=buefy&hide_border=true&date_format=j%20M%5B%20Y%5D&currStreakNum=FFB000&currStreakLabel=FFB001" alt="winshaurya's GitHub Streak" /> -->
   </picture>
 
 <picture>
