@@ -17,22 +17,6 @@
 ---
 
 
-### 📈 GitHub Stats
-
-  <picture align="center">
-    <source media="(prefers-color-scheme: dark)" srcset="https://streak-stats.demolab.com?user=winshaurya&theme=vision-friendly-dark&hide_border=true&date_format=j%20M%5B%20Y%5D" />
-    <source media="(prefers-color-scheme: light)" srcset="https://streak-stats.demolab.com?user=winshaurya&theme=buefy&hide_border=true&date_format=j%20M%5B%20Y%5D&currStreakNum=FFB000&currStreakLabel=FFB011" />
-<!--     <img align="center" src="https://streak-stats.demolab.com?user=winshaurya&theme=buefy&hide_border=true&date_format=j%20M%5B%20Y%5D&currStreakNum=FFB000&currStreakLabel=FFB011" alt="winshaurya's GitHub Streak" /> -->
-  </picture>
-
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/SudoKMaar/SudoKMaar/output/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/SudoKMaar/SudoKMaar/output/github-snake.svg" />
-  <img alt="winshaurya's GitHub Contribution Heatmap" src="https://raw.githubusercontent.com/SudoKMaar/SudoKMaar/output/github-snake.svg" />
-</picture>
-
-
----
 
 ### ✨ Let's Connect
 <p align="left">
