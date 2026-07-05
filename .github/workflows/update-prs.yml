@@ -26,7 +26,8 @@ jobs:
             const fs = require('fs');
 
             console.log("Fetching PRs for author:winshaurya...");
-            // Included your repo exclusions from earlier so you don't lose them!
+            
+            // Your exact exclusions are maintained here
             const query = 'is:pr author:winshaurya is:merged is:public -repo:Parth-Gupta-github/FloatNote -repo:winshaurya/internshipPortal -repo:ParvTiwari/MetroMart';
             
             const result = await github.rest.search.issuesAndPullRequests({
@@ -69,9 +70,38 @@ jobs:
               const safeLang = encodeURIComponent(lang);
               const cleanTitle = issue.title.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-              table += `      <tr><td align="left" valign="middle"> <a href="https://github.com/${owner}" style="text-decoration:none;color:inherit;"> <img src="https://github.com/${owner}.png" width="45" style="border-radius:6px;vertical-align:middle;" alt="${orgName}"> <span style="font-size:16px;"><b>&nbsp;${orgName}</b></span> </a> </td> <td align="left" valign="middle"> <a href="${issue.html_url}" style="font-size:16px;"><b>${owner} / ${repoName}</b></a><br> <i style="font-size:14px;color:gray;">${cleanTitle}</i> </td> <td align="center" valign="middle"> <a href="${issue.html_url}"> <img src="https://img.shields.io/badge/Merged-8250DF?style=flat&logo=data:image/svg+xml;base64,${mergeIconBase64}&logoColor=white" height="32" alt="Merged"> </a> </td> <td align="center" valign="middle"> <img src="https://img.shields.io/badge/${safeLang}-555555?style=flat&logo=${lang.toLowerCase()}&logoColor=white" height="32" alt="${lang}"> </td> </tr>\n`; } table += `    </tbody>\n  </table>\n</div>`; const readme = fs.readFileSync('README.md', 'utf8'); const targetRegex = /[\s\S]*?/; if (!targetRegex.test(readme)) { console.error("ERROR: The required HTML comments were not found in README.md."); return; } const newReadme = readme.replace( targetRegex, `\n### Contributions\n\n${table}\n` ); fs.writeFileSync('README.md', newReadme); console.log("README successfully updated in memory!");
+              table += `<tr><td align="left" valign="middle"><a href="https://github.com/${owner}" style="text-decoration:none;color:inherit;"><img src="https://github.com/${owner}.png" width="45" style="border-radius:6px;vertical-align:middle;" alt="${orgName}"><span style="font-size:16px;"><b>&nbsp;${orgName}</b></span></a></td><td align="left" valign="middle"><a href="${issue.html_url}" style="font-size:16px;"><b>${owner} / ${repoName}</b></a><br><i style="font-size:14px;color:gray;">${cleanTitle}</i></td><td align="center" valign="middle"><a href="${issue.html_url}"><img src="https://img.shields.io/badge/Merged-8250DF?style=flat&logo=data:image/svg+xml;base64,${mergeIconBase64}&logoColor=white" height="32" alt="Merged"></a></td><td align="center" valign="middle"><img src="https://img.shields.io/badge/${safeLang}-555555?style=flat&logo=${lang.toLowerCase()}&logoColor=white" height="32" alt="${lang}"></td></tr>\n`;
+            }
+
+            table += `    </tbody>\n  </table>\n</div>`;
+
+            const readme = fs.readFileSync('README.md', 'utf8');
+
+            // FOOLPROOF METHOD: String Slicing instead of Regex
+            const startTag = '';
+            const endTag = '';
+
+            const startIndex = readme.indexOf(startTag);
+            const endIndex = readme.indexOf(endTag);
+
+            if (startIndex === -1 || endIndex === -1 || startIndex >= endIndex) {
+              console.error("ERROR: Tags missing or in the wrong order. Ensure README contains exact START and END tags.");
+              return;
+            }
+
+            // Keep everything before the start tag (including the tag itself)
+            const before = readme.substring(0, startIndex + startTag.length);
+            
+            // Keep everything after the end tag (including the tag itself)
+            const after = readme.substring(endIndex);
+
+            // Construct the final string: Before -> New Content -> After
+            const newReadme = `${before}\n\n### Contributions\n\n${table}\n\n${after}`;
+
+            fs.writeFileSync('README.md', newReadme);
+            console.log("README successfully updated without duplicating!");
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs: auto-update merged PRs (1.5x scaled table layout)"
+          commit_message: "docs: auto-update merged PRs cleanly"
