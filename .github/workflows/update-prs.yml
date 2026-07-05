@@ -77,31 +77,40 @@ jobs:
 
             const readme = fs.readFileSync('README.md', 'utf8');
 
-            // FOOLPROOF METHOD: String Slicing instead of Regex
-            const startTag = '';
-            const endTag = '';
+            // 1. Locate the heading (checks for either ### or #)
+            let targetHeading = '### Contributions';
+            let startIndex = readme.indexOf(targetHeading);
 
-            const startIndex = readme.indexOf(startTag);
-            const endIndex = readme.indexOf(endTag);
+            if (startIndex === -1) {
+              targetHeading = '# Contributions';
+              startIndex = readme.indexOf(targetHeading);
+            }
 
-            if (startIndex === -1 || endIndex === -1 || startIndex >= endIndex) {
-              console.error("ERROR: Tags missing or in the wrong order. Ensure README contains exact START and END tags.");
+            if (startIndex === -1) {
+              console.error("ERROR: Neither '### Contributions' nor '# Contributions' was found in the README.");
               return;
             }
 
-            // Keep everything before the start tag (including the tag itself)
-            const before = readme.substring(0, startIndex + startTag.length);
-            
-            // Keep everything after the end tag (including the tag itself)
+            // 2. Find where the current section ends (looks for the next Markdown heading)
+            let searchStartIndex = startIndex + targetHeading.length;
+            let endIndex = readme.indexOf('\n#', searchStartIndex);
+
+            // If no other headings exist below this, we replace down to the end of the file
+            if (endIndex === -1) {
+              endIndex = readme.length;
+            }
+
+            // 3. Slice the file contents
+            const before = readme.substring(0, startIndex);
             const after = readme.substring(endIndex);
 
-            // Construct the final string: Before -> New Content -> After
-            const newReadme = `${before}\n\n### Contributions\n\n${table}\n\n${after}`;
+            // 4. Construct the final README
+            const newReadme = `${before}${targetHeading}\n\n${table}\n${after}`;
 
             fs.writeFileSync('README.md', newReadme);
-            console.log("README successfully updated without duplicating!");
+            console.log("README successfully updated using dynamic heading replacement!");
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          commit_message: "docs: auto-update merged PRs cleanly"
+          commit_message: "docs: auto-update merged PRs safely"
