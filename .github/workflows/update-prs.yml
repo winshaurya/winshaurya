@@ -25,26 +25,23 @@ jobs:
           script: |
             const fs = require('fs');
 
+            console.log("Fetching PRs for author:winshaurya...");
             const query = 'is:pr author:winshaurya is:merged is:public';
             const result = await github.rest.search.issuesAndPullRequests({
               q: query,
               per_page: 6
             });
 
+            console.log(`Found ${result.data.items.length} merged PRs.`);
+            
+            if (result.data.items.length === 0) {
+              console.log("No PRs found. Skipping README update.");
+              return;
+            }
+
             const mergeIconBase64 = "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxNiAxNiIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2IiBmaWxsPSJ3aGl0ZSI%2BPHBhdGggZD0iTTUuNDUgNS4xNTRBNC4yNSA0LjI1IDAgMCAwIDkuMjUgNy41aDEuMzc4YTIuMjUxIDIuMjUxIDAgMSAxIDAgMS41SDkuMjVBNS43MzQgNS43MzQgMCAwIDEgNSA3LjEyM3YzLjUwNWEyLjI1IDIuMjUgMCAxIDEtMS41IDBWNS4zNzJhMi4yNSAyLjI1IDAgMSAxIDEuOTUtLjIxOFpNNC4yNSAxMy41YS43NS43NSAwIDEgMCAwLTEuNS43NS43NSAwIDAgMCAwIDEuNVptOC41LTQuNWEuNzUuNzUgMCAxIDAgMC0xLjUuNzUuNzUgMCAwIDAgMCAxLjVaTTUgMy4yNWEuNzUuNzUgMCAxIDAgMCAuMDA1VjMuMjVaIj48L3BhdGg%2BPC9zdmc%2B";
 
-            let table = `<div align="center">
-              <table align="center" style="border-collapse: collapse;">
-                <thead>
-                  <tr>
-                    <th align="left" width="250">Organization</th>
-                    <th align="left" width="400">Repository & Pull Request</th>
-                    <th align="center" width="150">Status</th>
-                    <th align="center" width="150">Tech Stack</th>
-                  </tr>
-                </thead>
-                <tbody>
-            `;
+            let table = `<div align="center">\n  <table align="center" style="border-collapse: collapse;">\n    <thead>\n      <tr>\n        <th align="left" width="250">Organization</th>\n        <th align="left" width="400">Repository & Pull Request</th>\n        <th align="center" width="150">Status</th>\n        <th align="center" width="150">Tech Stack</th>\n      </tr>\n    </thead>\n    <tbody>\n`;
 
             for (const issue of result.data.items) {
               const repoUrlParts = issue.repository_url.split('/');
@@ -52,70 +49,52 @@ jobs:
               const repoName = repoUrlParts[repoUrlParts.length - 1];
 
               let orgName = owner;
-
               try {
-                const orgData = await github.rest.users.getByUsername({
-                  username: owner
-                });
+                const orgData = await github.rest.users.getByUsername({ username: owner });
                 orgName = orgData.data.name || owner;
               } catch (e) {
                 console.log(`Could not fetch org for ${owner}`);
               }
 
               let lang = 'Code';
-
               try {
-                const repo = await github.rest.repos.get({
-                  owner,
-                  repo: repoName
-                });
+                const repo = await github.rest.repos.get({ owner, repo: repoName });
                 lang = repo.data.language || 'Code';
               } catch (e) {
                 console.log(`Could not fetch language for ${repoName}`);
               }
 
               const safeLang = encodeURIComponent(lang);
-              const cleanTitle = issue.title
-                .replace(/</g, '&lt;')
-                .replace(/>/g, '&gt;');
+              const cleanTitle = issue.title.replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
-              table += `
-                  <tr>
-                    <td align="left" valign="middle">
-                      <a href="https://github.com/${owner}" style="text-decoration:none;color:inherit;">
-                        <img src="https://github.com/${owner}.png" width="45" style="border-radius:6px;vertical-align:middle;" alt="${orgName}">
-                        <span style="font-size:16px;"><b>&nbsp;${orgName}</b></span>
-                      </a>
-                    </td>
-                    <td align="left" valign="middle">
-                      <a href="${issue.html_url}" style="font-size:16px;"><b>${owner} / ${repoName}</b></a><br>
-                      <i style="font-size:14px;color:gray;">${cleanTitle}</i>
-                    </td>
-                    <td align="center" valign="middle">
-                      <a href="${issue.html_url}">
-                        <img src="https://img.shields.io/badge/Merged-8250DF?style=flat&logo=data:image/svg+xml;base64,${mergeIconBase64}&logoColor=white" height="32" alt="Merged">
-                      </a>
-                    </td>
-                    <td align="center" valign="middle">
-                      <img src="https://img.shields.io/badge/${safeLang}-555555?style=flat&logo=${lang.toLowerCase()}&logoColor=white" height="32" alt="${lang}">
-                    </td>
-                  </tr>
-              `;
+              table += `      <tr>
+              <td align="left" valign="middle">
+              <a href="https://github.com/${owner}" style="text-decoration:none;color:inherit;">
+            <img src="https://github.com/${owner}.png" width="45" style="border-radius:6px;vertical-align:middle;" alt="${orgName}">
+            <span style="font-size:16px;"><b>&nbsp;${orgName}</b></span>
+            </a> </td>       <td align="left" valign="middle">          <a href="${issue.html_url}" style="font-size:16px;"><b>${owner} / ${repoName}</b></a><br>          <i style="font-size:14px;color:gray;">${cleanTitle}</i> </td>        <td align="center" valign="middle">          <a href="${issue.html_url}">
+            <img src="https://img.shields.io/badge/Merged-8250DF?style=flat&logo=data:image/svg+xml;base64,${mergeIconBase64}&logoColor=white" height="32" alt="Merged">          </a>        </td>        <td align="center" valign="middle">          <img src="https://img.shields.io/badge/${safeLang}-555555?style=flat&logo=${lang.toLowerCase()}&logoColor=white" height="32" alt="${lang}">        </td>     </tr>\n`;
             }
 
-            table += `
-                </tbody>
-              </table>
-            </div>`;
+            table += `    </tbody>\n  </table>\n</div>`;
 
             const readme = fs.readFileSync('README.md', 'utf8');
 
+            // Fixed non-greedy regex (*?) to prevent overwriting the whole file
+            const targetRegex = /[\s\S]*?/;
+            
+            if (!targetRegex.test(readme)) {
+              console.error("ERROR: The required HTML comments were not found in README.md.");
+              return;
+            }
+
             const newReadme = readme.replace(
-              /<!-- START_SECTION:merged_prs -->[\s\S]*<!-- END_SECTION:merged_prs -->/,
-              `<!-- START_SECTION:merged_prs -->\n${table}\n<!-- END_SECTION:merged_prs -->`
+              targetRegex,
+              `\n${table}\n`
             );
 
             fs.writeFileSync('README.md', newReadme);
+            console.log("README successfully updated in memory!");
 
       - name: Commit and Push
         uses: stefanzweifel/git-auto-commit-action@v5
