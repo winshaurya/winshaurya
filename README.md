@@ -15,7 +15,7 @@
         <td align="left" valign="middle">
           <a href="https://github.com/winshaurya" style="text-decoration: none; color: inherit;">
             <img src="https://github.com/winshaurya.png" width="45" style="border-radius: 6px; vertical-align: middle;" alt="Avatar">
-            <span style="font-size: 16px;"><b>&nbsp;Shaurya Mishra</b></span>
+            <span style="font-size: 16px;"> <b>&nbsp;Shaurya Mishra</b></span>
           </a>
         </td>
         <td align="left" valign="middle">
@@ -30,6 +30,7 @@
         </td>
       </tr>
     </tbody>
+    
     
   </table>
 </div>
