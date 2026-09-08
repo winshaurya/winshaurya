@@ -77,17 +77,21 @@ jobs:
 
             const readme = fs.readFileSync('README.md', 'utf8');
 
-            // 1. Locate the heading (checks for either ### or #)
-            let targetHeading = '### Contributions';
-            let startIndex = readme.indexOf(targetHeading);
+            // 1. Locate the heading (supports singular/plural, ### or #)
+            const candidateHeadings = ['### Contributions', '# Contributions', '### Contribution', '# Contribution'];
+            let targetHeading = '';
+            let startIndex = -1;
 
-            if (startIndex === -1) {
-              targetHeading = '# Contributions';
-              startIndex = readme.indexOf(targetHeading);
+            for (const heading of candidateHeadings) {
+              startIndex = readme.indexOf(heading);
+              if (startIndex !== -1) {
+                targetHeading = heading;
+                break;
+              }
             }
 
             if (startIndex === -1) {
-              console.error("ERROR: Neither '### Contributions' nor '# Contributions' was found in the README.");
+              console.error("ERROR: No supported Contributions heading was found in the README.");
               return;
             }
 
