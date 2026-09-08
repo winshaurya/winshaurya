@@ -1,4 +1,4 @@
-### Contributions
+### Contribution
 
 <div align="center">
   <table align="center" style="border-collapse: collapse;">
