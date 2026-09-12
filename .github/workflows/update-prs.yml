@@ -30,12 +30,14 @@ jobs:
             // Your exact exclusions are maintained here
             const query = 'is:pr author:winshaurya is:merged is:public -repo:Parth-Gupta-github/FloatNote -repo:winshaurya/internshipPortal -repo:ParvTiwari/MetroMart';
             
-            const result = await github.rest.search.issuesAndPullRequests({
-              q: query,
-              per_page: 6
-            });
-
-            console.log(`Found ${result.data.items.length} merged PRs.`);
+            const result = await github.paginate(
+            github.rest.search.issuesAndPullRequests,
+            {
+                q: query,
+                per_page: 100
+              }
+            );
+            console.log(`Found ${result.length} merged PRs.`);
             
             if (result.data.items.length === 0) {
               console.log("No PRs found. Skipping README update.");
